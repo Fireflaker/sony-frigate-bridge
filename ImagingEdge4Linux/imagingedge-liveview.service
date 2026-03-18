@@ -1,0 +1,15 @@
+[Unit]
+Description=Sony Imaging Edge liveview bridge
+After=network-online.target NetworkManager.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/sonybridge/ImagingEdge4Linux
+EnvironmentFile=-/etc/default/imagingedge-liveview
+ExecStart=/opt/sonybridge/ImagingEdge4Linux/run_liveview.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

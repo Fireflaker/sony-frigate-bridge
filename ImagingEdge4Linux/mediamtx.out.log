@@ -1,0 +1,27 @@
+2026/03/14 18:05:52 INF MediaMTX v1.16.3, windows, amd64
+2026/03/14 18:05:52 INF configuration loaded from E:\Co2Root\ImagingEdge4Linux\mediamtx.yml
+2026/03/14 18:05:52 INF [RTSP] listener opened on :8554 (TCP/RTSP), :8000 (UDP/RTP), :8001 (UDP/RTCP)
+2026/03/14 18:05:52 INF [RTMP] listener opened on :1935
+2026/03/14 18:05:52 INF [HLS] listener opened on :8888
+2026/03/14 18:05:52 INF [WebRTC] listener opened on :8889 (HTTP), :8189 (ICE/UDP)
+2026/03/14 18:05:52 INF [SRT] listener opened on :8890 (UDP)
+2026/03/14 18:06:04 INF [RTSP] [conn 127.0.0.1:53249] opened
+2026/03/14 18:06:04 INF [RTSP] [conn 127.0.0.1:53249] closed: no stream is available on path 'sony'
+2026/03/14 18:06:23 INF [RTSP] [conn 127.0.0.1:53274] opened
+2026/03/14 18:06:23 INF [RTSP] [session 69b75edd] created by 127.0.0.1:53274
+2026/03/14 18:06:23 INF [path sony] stream is available and online, 1 track (M-JPEG)
+2026/03/14 18:06:23 INF [RTSP] [session 69b75edd] is publishing to path 'sony'
+2026/03/14 18:06:28 INF [RTSP] [session 69b75edd] destroyed: torn down by 127.0.0.1:53274
+2026/03/14 18:06:28 INF [RTSP] [conn 127.0.0.1:53274] closed: read tcp 127.0.0.1:8554->127.0.0.1:53274: wsarecv: An established connection was aborted by the software in your host machine.
+2026/03/14 18:06:34 INF [RTSP] [conn 127.0.0.1:53283] opened
+2026/03/14 18:06:34 INF [RTSP] [session dc84a7ef] created by 127.0.0.1:53283
+2026/03/14 18:06:34 INF [path sony] stream is available and online, 1 track (H264)
+2026/03/14 18:06:34 INF [RTSP] [session dc84a7ef] is publishing to path 'sony'
+2026/03/14 18:06:34 INF [path sony] RTP packets are too big (1460 > 1440), remuxing them into smaller ones
+2026/03/14 18:06:42 INF [RTSP] [conn 127.0.0.1:63628] opened
+2026/03/14 18:06:42 INF [RTSP] [session b887791b] created by 127.0.0.1:63628
+2026/03/14 18:06:42 INF [RTSP] [session b887791b] is reading from path 'sony', with TCP, 1 track (H264)
+2026/03/14 18:06:44 INF [RTSP] [session dc84a7ef] destroyed: torn down by 127.0.0.1:53283
+2026/03/14 18:06:44 INF [RTSP] [conn 127.0.0.1:63628] closed: terminated
+2026/03/14 18:06:44 INF [RTSP] [conn 127.0.0.1:53283] closed: read tcp 127.0.0.1:8554->127.0.0.1:53283: wsarecv: An established connection was aborted by the software in your host machine.
+2026/03/14 18:06:44 INF [RTSP] [session b887791b] destroyed: terminated

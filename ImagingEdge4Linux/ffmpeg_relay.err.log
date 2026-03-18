@@ -1,0 +1,3 @@
+[swscaler @ 000001f6d6006f80] deprecated pixel format used, make sure you did set range correctly
+[http @ 000001f6d41f9900] Stream ends prematurely at 5005710, should be 18446744073709551615
+[in#0/mpjpeg @ 000001f6d41f9440] Error during demuxing: I/O error

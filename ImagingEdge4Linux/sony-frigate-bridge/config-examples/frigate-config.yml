@@ -1,0 +1,77 @@
+# Frigate Configuration for Sony Camera via Bridge
+
+# Global configuration
+# https://docs.frigate.video/configuration/index.html#global-configuration
+database:
+  path: /config/frigate.db
+
+detectors:
+  cpu:
+    type: cpu
+
+# Motion/Object detection configuration
+motion:
+  mask:
+    - 0,0,1920,0,1920,1080,0,1080
+
+# Define your cameras
+cameras:
+  sony_a6400:
+    # Enable/disable camera (do not track)
+    enabled: true
+    
+    # RTMP/Stream Configuration
+    ffmpeg:
+      inputs:
+        - path: http://10.0.0.101:8765/stream
+          roles:
+            - detect
+            - record
+    
+    # Image processing
+    detect:
+      width: 1920
+      height: 1080
+      fps: 15
+    
+    # Recording options
+    record:
+      enabled: true
+      retain:
+        days: 7
+        mode: motion
+    
+    # Snapshots
+    snapshots:
+      enabled: true
+      retain:
+        default: 10
+        objects: 14
+    
+    # Object detection
+    objects:
+      filters:
+        person:
+          min_area: 5000
+          max_area: 100000
+          threshold: 0.7
+      track:
+        - person
+        - car
+        - dog
+        - cat
+
+# Logging
+logger:
+  default: info
+  logs:
+    frigate.event: debug
+    frigate.ptz.onvif: debug
+
+# Web UI
+web:
+  port: 5000
+
+# RTMP Stream (optional, for external streaming)
+rtmp:
+  enabled: false

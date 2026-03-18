@@ -1,0 +1,24 @@
+[Unit]
+Description=Sony Camera ImagingEdge Liveview Bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/sonybridge/ImagingEdge4Linux
+ExecStart=/opt/sonybridge/ImagingEdge4Linux/.venv/bin/python /opt/sonybridge/ImagingEdge4Linux/liveview_webui.py \
+  --address 192.168.122.1 \
+  --camera-port 10000 \
+  --wifi-interface wlx00c0caa60b48 \
+  --listen 0.0.0.0 \
+  --port 8765
+
+Restart=on-failure
+RestartSec=10
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
